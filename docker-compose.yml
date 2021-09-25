@@ -11,8 +11,8 @@ services:
   nginx:
     container_name: nginx
     ports:
-      - 80:8080
-      - 443:8443
+      - ${NGINX_BIND_IP}:80:8080
+      - ${NGINX_BIND_IP}:443:8443
     environment:
       - TZ=${TZ}
     restart: always
