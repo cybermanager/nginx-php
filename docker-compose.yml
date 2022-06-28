@@ -25,7 +25,7 @@ services:
       - php-fpm
     networks:
       - nginx-php
-    image: bitnami/nginx:1.21-debian-10
+    image: bitnami/nginx:1.22-debian-11
   php-fpm:
     container_name: php-fpm
     tty: true
@@ -37,4 +37,4 @@ services:
       - ./app/:/app/:rw
     networks:
       - nginx-php
-    image: bitnami/php-fpm:8.0-debian-10
+    image: bitnami/php-fpm:8.1-debian-11
